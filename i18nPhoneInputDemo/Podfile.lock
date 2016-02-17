@@ -1,0 +1,13 @@
+PODS:
+  - libPhoneNumber-iOS (0.8.10)
+  - Masonry (0.6.4)
+
+DEPENDENCIES:
+  - libPhoneNumber-iOS (~> 0.7)
+  - Masonry (~> 0.6.1)
+
+SPEC CHECKSUMS:
+  libPhoneNumber-iOS: 7bfd00f843fdcd82b5182b463e8eb3b27579f41d
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+
+COCOAPODS: 0.39.0
