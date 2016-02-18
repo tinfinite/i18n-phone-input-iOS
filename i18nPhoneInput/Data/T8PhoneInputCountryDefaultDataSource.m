@@ -60,4 +60,16 @@
     return [searchResult mutableCopy];
 }
 
+- (id)getModelWithCode:(NSString *)code
+{
+    __block T8PhoneInputCountryModel *country = nil;
+    [self.dataArray enumerateObjectsUsingBlock:^(T8PhoneInputCountryModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[obj t8_country_code] isEqualToString:code]) {
+            country = obj;
+            *stop = YES;
+        }
+    }];
+    return country;
+}
+
 @end

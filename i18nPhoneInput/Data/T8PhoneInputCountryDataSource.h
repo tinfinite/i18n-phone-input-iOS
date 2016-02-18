@@ -15,6 +15,7 @@
 
 - (NSArray *)getAllCountryModels;
 - (NSArray *)searchCountryModelsWithKey:(NSString *)key;
+- (id)getModelWithCode:(NSString *)code;
 
 @end
 

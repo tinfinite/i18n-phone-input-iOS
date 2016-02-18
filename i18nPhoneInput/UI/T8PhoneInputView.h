@@ -25,7 +25,7 @@
 @property (strong, nonatomic) UILabel *infoLabel;
 @property (strong, nonatomic) UIButton *countryButton;
 @property (strong, nonatomic) UIImageView *arrowView;
-@property (strong, nonatomic) UILabel *codeLabel;
+@property (strong, nonatomic) UITextField *codeTextField;
 @property (strong, nonatomic) UITextField *numberTextField;
 
 @property (strong, nonatomic) NSString *codeStr;
