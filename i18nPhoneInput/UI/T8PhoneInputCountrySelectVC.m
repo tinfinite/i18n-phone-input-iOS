@@ -121,6 +121,13 @@
     self.letterIndexView.keys = letters;
 }
 
+- (void)searchDone
+{
+    self.searchController.searchBar.text = nil;
+    self.searchController.active = NO;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - getter
 - (UITableView *)tableView
 {
@@ -283,6 +290,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    T8PhoneInputCountryModel *model = nil;
+    if (tableView == self.tableView) {
+        NSString *key = self.sectionKeys[indexPath.section];
+        NSArray *array = self.classifyDict[key];
+        model = array[indexPath.row];
+    }else{
+        model = self.searchArray[indexPath.row];
+    }
+    
+    if (self.doneBlock) {
+        self.doneBlock(model);
+    }
+    
+    [self searchDone];
 }
 
 #pragma mark - T8LetterIndexNavigationViewDelegate

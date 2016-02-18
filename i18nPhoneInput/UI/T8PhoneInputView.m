@@ -82,7 +82,12 @@
 - (void)countryButtonPressed
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(inputView:presentSelectVC:)]) {
-        T8PhoneInputCountrySelectVC *select = [[T8PhoneInputCountrySelectVC alloc] initWithDataSource:[[T8PhoneInputCountryDefaultDataSource alloc] init]];
+        T8PhoneInputCountrySelectVC *select = [[T8PhoneInputCountrySelectVC alloc] init];
+        __weak typeof(self) weakSelf = self;
+        select.doneBlock = ^(T8PhoneInputCountryModel *country){
+            weakSelf.codeLabel.text = [NSString stringWithFormat:@"+%@", [country t8_country_code]];
+            [weakSelf.countryButton setTitle:[country t8_country_name_zh] forState:UIControlStateNormal];
+        };
         [self.delegate inputView:self presentSelectVC:select];
     }
 }
