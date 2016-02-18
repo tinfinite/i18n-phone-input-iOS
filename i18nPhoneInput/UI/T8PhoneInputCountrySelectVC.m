@@ -9,13 +9,16 @@
 #import "T8PhoneInputCountrySelectVC.h"
 #import "T8PhoneInputCountryDefaultDataSource.h"
 #import "T8PhoneInputCountryCell.h"
+#import "T8LetterIndexNavigationView.h"
 
-@interface T8PhoneInputCountrySelectVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface T8PhoneInputCountrySelectVC ()<UITableViewDelegate, UITableViewDataSource, T8LetterIndexNavigationViewDelegate>
 
 @property (strong, nonatomic) id<T8PhoneInputCountryDataSource> dataSource;
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (strong, nonatomic) NSMutableArray *sectionKeys;
 @property (strong, nonatomic) NSMutableDictionary *classifyDict;
+
+@property (strong, nonatomic) T8LetterIndexNavigationView *letterIndexView;
 
 @end
 
@@ -49,6 +52,7 @@
     [self prepareData];
     
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.letterIndexView];
     
     // Do any additional setup after loading the view.
 }
@@ -109,6 +113,7 @@
     [self.classifyDict removeObjectsForKeys:emptyKeys];
     
     self.sectionKeys = letters;
+    self.letterIndexView.keys = letters;
 }
 
 #pragma mark - getter
@@ -145,6 +150,17 @@
         _classifyDict = [NSMutableDictionary dictionary];
     }
     return _classifyDict;
+}
+
+- (T8LetterIndexNavigationView *)letterIndexView
+{
+    if (!_letterIndexView) {
+        _letterIndexView = [[T8LetterIndexNavigationView alloc] init];
+        _letterIndexView.frame = CGRectMake(self.tableView.frame.origin.x+self.tableView.frame.size.width-20, self.tableView.frame.origin.y+64, 20, self.tableView.frame.size.height-64);
+        _letterIndexView.isNeedSearchIcon = NO;
+        _letterIndexView.delegate = self;
+    }
+    return _letterIndexView;
 }
 
 #pragma mark - UITableViewDataSource && UITableViewDelegate
@@ -206,6 +222,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - T8LetterIndexNavigationViewDelegate
+- (void)LetterIndexNavigationView:(T8LetterIndexNavigationView *)LetterIndexNavigationView didSelectIndex:(NSInteger)index
+{
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 @end
