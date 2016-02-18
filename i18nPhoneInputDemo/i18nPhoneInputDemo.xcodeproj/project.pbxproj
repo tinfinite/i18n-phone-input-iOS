@@ -30,6 +30,7 @@
 		6DE073D41C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */; };
 		6DE073D51C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */; };
 		6DE073D81C740A0600BA4AEA /* T8PhoneInputCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */; };
+		6DE073DD1C75AC9400BA4AEA /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE073DC1C75AC9400BA4AEA /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationView.m; sourceTree = "<group>"; };
 		6DE073D61C740A0600BA4AEA /* T8PhoneInputCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryCell.h; sourceTree = "<group>"; };
 		6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryCell.m; sourceTree = "<group>"; };
+		6DE073DC1C75AC9400BA4AEA /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		855A5516640D5DDB8B394B61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1165E625974EBD8F5DEA2324 /* libPods.a in Frameworks */,
+				6DE073DD1C75AC9400BA4AEA /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +153,7 @@
 				6DD827E51C61CF5100CC6ECE /* AppDelegate.m */,
 				6DD827E71C61CF5100CC6ECE /* ViewController.h */,
 				6DD827E81C61CF5100CC6ECE /* ViewController.m */,
+				6DE073DC1C75AC9400BA4AEA /* Reveal.framework */,
 				6DD8283C1C62324F00CC6ECE /* aaa.txt */,
 				6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */,
 				6DE073C71C6C29DD00BA4AEA /* country_code.txt */,
@@ -612,9 +616,30 @@
 			baseConfigurationReference = 6AB8702D046970463C70E3D4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/i18nPhoneInputDemo",
+				);
 				INFOPLIST_FILE = i18nPhoneInputDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"libPhoneNumber-iOS\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.i18nPhoneInputDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -625,9 +650,30 @@
 			baseConfigurationReference = 2BBFFEDD0886B092DEC54439 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/i18nPhoneInputDemo",
+				);
 				INFOPLIST_FILE = i18nPhoneInputDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"libPhoneNumber-iOS\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.i18nPhoneInputDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

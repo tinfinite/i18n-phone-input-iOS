@@ -11,14 +11,18 @@
 #import "T8PhoneInputCountryCell.h"
 #import "T8LetterIndexNavigationView.h"
 
-@interface T8PhoneInputCountrySelectVC ()<UITableViewDelegate, UITableViewDataSource, T8LetterIndexNavigationViewDelegate>
+@interface T8PhoneInputCountrySelectVC ()<UITableViewDelegate, UITableViewDataSource, T8LetterIndexNavigationViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, UISearchControllerDelegate>
 
 @property (strong, nonatomic) id<T8PhoneInputCountryDataSource> dataSource;
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (strong, nonatomic) NSMutableArray *sectionKeys;
 @property (strong, nonatomic) NSMutableDictionary *classifyDict;
+@property (strong, nonatomic) NSMutableArray *searchArray;
 
 @property (strong, nonatomic) T8LetterIndexNavigationView *letterIndexView;
+
+@property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end
 
@@ -53,6 +57,7 @@
     
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.letterIndexView];
+    self.tableView.tableHeaderView = self.searchController.searchBar;
     
     // Do any additional setup after loading the view.
 }
@@ -152,6 +157,14 @@
     return _classifyDict;
 }
 
+- (NSMutableArray *)searchArray
+{
+    if (!_searchArray) {
+        _searchArray = [NSMutableArray array];
+    }
+    return _searchArray;
+}
+
 - (T8LetterIndexNavigationView *)letterIndexView
 {
     if (!_letterIndexView) {
@@ -163,17 +176,52 @@
     return _letterIndexView;
 }
 
+- (UISearchBar *)searchBar
+{
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0f)];
+        _searchBar.placeholder = @"搜索";
+        _searchBar.delegate = self;
+    }
+    return _searchBar;
+}
+
+- (UISearchController *)searchController
+{
+    if (!_searchController) {
+        UITableViewController *searchResult = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        searchResult.tableView.delegate = self;
+        searchResult.tableView.dataSource = self;
+        searchResult.view.backgroundColor = [UIColor whiteColor];
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:searchResult];
+        _searchController.searchResultsUpdater = self;
+        _searchController.delegate = self;
+        _searchController.searchBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44.0f);
+        _searchController.searchBar.placeholder = @"搜索";
+        _searchController.searchBar.delegate = self;
+    }
+    return _searchController;
+}
+
 #pragma mark - UITableViewDataSource && UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.sectionKeys.count;
+    if (tableView == self.tableView) {
+        return self.sectionKeys.count;
+    }else{
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSString *key = self.sectionKeys[section];
-    NSArray *array = self.classifyDict[key];
-    return array.count;
+    if (tableView == self.tableView) {
+        NSString *key = self.sectionKeys[section];
+        NSArray *array = self.classifyDict[key];
+        return array.count;
+    }else{
+        return self.searchArray.count;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -183,23 +231,31 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 20.0f;
+    if (tableView == self.tableView) {
+        return 20.0f;
+    }else{
+        return 0.1f;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.0f;
+    return 0.1f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *view = [[UILabel alloc] init];
-    view.text = [NSString stringWithFormat:@"   %@", self.sectionKeys[section]];
-    view.font = [UIFont boldSystemFontOfSize:14];
-    view.textColor = [UIColor grayColor];
-    view.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:245.0/255 alpha:1];
-    view.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:226.0/255 alpha:1];
-    return view;
+    if (tableView == self.tableView) {
+        UILabel *view = [[UILabel alloc] init];
+        view.text = [NSString stringWithFormat:@"   %@", self.sectionKeys[section]];
+        view.font = [UIFont boldSystemFontOfSize:14];
+        view.textColor = [UIColor grayColor];
+        view.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:245.0/255 alpha:1];
+        view.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:226.0/255 alpha:1];
+        return view;
+    }else{
+        return nil;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -210,9 +266,14 @@
         cell = [[T8PhoneInputCountryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    NSString *key = self.sectionKeys[indexPath.section];
-    NSArray *array = self.classifyDict[key];
-    T8PhoneInputCountryModel *model = array[indexPath.row];
+    T8PhoneInputCountryModel *model = nil;
+    if (tableView == self.tableView) {
+        NSString *key = self.sectionKeys[indexPath.section];
+        NSArray *array = self.classifyDict[key];
+        model = array[indexPath.row];
+    }else{
+        model = self.searchArray[indexPath.row];
+    }
     cell.countryLabel.text = [model t8_country_name_zh];
     cell.codeLabel.text = [NSString stringWithFormat:@"+%@", [model t8_country_code]];
     
@@ -228,6 +289,39 @@
 - (void)LetterIndexNavigationView:(T8LetterIndexNavigationView *)LetterIndexNavigationView didSelectIndex:(NSInteger)index
 {
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    searchBar.showsCancelButton = YES;
+    if (searchBar.subviews.count > 0) {
+        [searchBar.subviews[0].subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[UIButton class]]) {
+                UIButton *btn = (UIButton *)obj;
+                [btn setTitle:@"取消" forState:UIControlStateNormal];
+                [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+                btn.titleLabel.font = [UIFont systemFontOfSize:16];
+            }
+        }];
+    }
+}
+
+#pragma mark - UISearchResultsUpdating
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    [self.searchArray removeAllObjects];
+    [self.searchArray addObjectsFromArray:[self.dataSource searchCountryModelsWithKey:searchController.searchBar.text]];
+    
+    //to do, update search result...
+    UITableView *tableView = ((UITableViewController *)searchController.searchResultsController).tableView;
+    UIEdgeInsets contentInset = tableView.contentInset;
+    contentInset.top = 64;
+    tableView.contentInset = contentInset;
+    UIEdgeInsets scrollInset = tableView.scrollIndicatorInsets;
+    scrollInset.top = 64;
+    tableView.scrollIndicatorInsets = scrollInset;
+    [tableView reloadData];
 }
 
 @end

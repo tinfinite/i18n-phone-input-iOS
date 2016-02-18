@@ -55,7 +55,9 @@
 
 - (NSArray *)searchCountryModelsWithKey:(NSString *)key
 {
-    return nil;
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"(t8_country_name_zh CONTAINS[cd] %@ OR t8_country_name_zh_pinyin CONTAINS[cd] %@)", key, key];
+    NSArray *searchResult = [self.dataArray filteredArrayUsingPredicate:pre];
+    return [searchResult mutableCopy];
 }
 
 @end
