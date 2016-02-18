@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *countryCode;
 @property (strong, nonatomic) NSString *countryNameEn;
 @property (strong, nonatomic) NSString *countryNameZh;
+@property (strong, nonatomic) NSString *countryNameZhPinyin;
 
 @end
 
@@ -28,6 +29,7 @@
         self.countryCode = [dict objectForKey:@"code"];
         self.countryNameEn = [dict objectForKey:@"nameEn"];
         self.countryNameZh = [dict objectForKey:@"nameZh"];
+        self.countryNameZhPinyin = [dict objectForKey:@"nameZhPinYin"];
         
     }
     return self;
@@ -52,6 +54,11 @@
 - (NSString *)t8_country_name_zh
 {
     return self.countryNameZh;
+}
+
+- (NSString *)t8_country_name_zh_pinyin
+{
+    return self.countryNameZhPinyin;
 }
 
 @end

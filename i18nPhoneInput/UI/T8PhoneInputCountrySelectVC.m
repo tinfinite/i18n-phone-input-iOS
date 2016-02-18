@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) id<T8PhoneInputCountryDataSource> dataSource;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *sectionKeys;
+@property (strong, nonatomic) NSMutableDictionary *classifyDict;
 
 @end
 
@@ -72,6 +74,41 @@
 - (void)prepareData
 {
     [self.dataArray addObjectsFromArray:[self.dataSource getAllCountryModels]];
+    [self classifyData];
+}
+
+- (void)classifyData
+{
+    //初始化数据结构
+    NSMutableArray *letters = [@[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]mutableCopy];
+    for (NSString *letter in letters) {
+        self.classifyDict[letter] = [NSMutableArray array];
+    }
+    
+    //分类
+    [self.dataArray enumerateObjectsUsingBlock:^(T8PhoneInputCountryModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *firstLetter = @"#";
+        if ([obj t8_country_name_zh_pinyin].length > 0) {
+            firstLetter = [[[obj t8_country_name_zh_pinyin] substringToIndex:1] uppercaseString];
+        }
+        [self.classifyDict[firstLetter] addObject:obj];
+    }];
+    
+    //排序 & 清理空的分组
+    NSMutableArray *emptyKeys = [NSMutableArray array];
+    [self.classifyDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSMutableArray * _Nonnull obj, BOOL * _Nonnull stop) {
+        if (obj.count == 0) {
+            [emptyKeys addObject:key];
+        }else{
+            [obj sortUsingComparator:^NSComparisonResult(T8PhoneInputCountryModel * _Nonnull obj1, T8PhoneInputCountryModel * _Nonnull obj2) {
+                return [[obj1 t8_country_name_zh_pinyin] compare:[obj2 t8_country_name_zh_pinyin]];
+            }];
+        }
+    }];
+    [letters removeObjectsInArray:emptyKeys];
+    [self.classifyDict removeObjectsForKeys:emptyKeys];
+    
+    self.sectionKeys = letters;
 }
 
 #pragma mark - getter
@@ -94,15 +131,33 @@
     return _dataArray;
 }
 
+- (NSMutableArray *)sectionKeys
+{
+    if (!_sectionKeys) {
+        _sectionKeys = [NSMutableArray array];
+    }
+    return _sectionKeys;
+}
+
+- (NSMutableDictionary *)classifyDict
+{
+    if (!_classifyDict) {
+        _classifyDict = [NSMutableDictionary dictionary];
+    }
+    return _classifyDict;
+}
+
 #pragma mark - UITableViewDataSource && UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return self.sectionKeys.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    NSString *key = self.sectionKeys[section];
+    NSArray *array = self.classifyDict[key];
+    return array.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -123,10 +178,11 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *view = [[UILabel alloc] init];
-    view.text = @"   A";
+    view.text = [NSString stringWithFormat:@"   %@", self.sectionKeys[section]];
     view.font = [UIFont boldSystemFontOfSize:14];
     view.textColor = [UIColor grayColor];
     view.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:245.0/255 alpha:1];
+    view.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:226.0/255 alpha:1];
     return view;
 }
 
@@ -138,8 +194,11 @@
         cell = [[T8PhoneInputCountryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.countryLabel.text = @"中国";
-    cell.codeLabel.text = @"+86";
+    NSString *key = self.sectionKeys[indexPath.section];
+    NSArray *array = self.classifyDict[key];
+    T8PhoneInputCountryModel *model = array[indexPath.row];
+    cell.countryLabel.text = [model t8_country_name_zh];
+    cell.codeLabel.text = [NSString stringWithFormat:@"+%@", [model t8_country_code]];
     
     return cell;
 }

@@ -15,6 +15,7 @@
 - (NSString *)t8_country_code;
 - (NSString *)t8_country_name_en;
 - (NSString *)t8_country_name_zh;
+- (NSString *)t8_country_name_zh_pinyin;
 
 @end
 

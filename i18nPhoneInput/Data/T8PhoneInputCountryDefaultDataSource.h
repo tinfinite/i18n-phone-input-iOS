@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "T8PhoneInputCountryDataSource.h"
+#import "T8PhoneInputCountryModel.h"
 
 @interface T8PhoneInputCountryDefaultDataSource : NSObject<T8PhoneInputCountryDataSource>
 
