@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "Resource/*.*"
+  s.resources = "i18nPhoneInput/Resource/*.*"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
