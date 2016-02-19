@@ -26,11 +26,11 @@
 		6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */; };
 		6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C71C6C29DD00BA4AEA /* country_code.txt */; };
 		6DE073CB1C70DCF300BA4AEA /* countryAndCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */; };
-		6DE073D31C72BB5A00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073CE1C72BB5A00BA4AEA /* T8LetterIndexSearchIcon@2x.png */; };
 		6DE073D41C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */; };
 		6DE073D51C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */; };
 		6DE073D81C740A0600BA4AEA /* T8PhoneInputCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */; };
 		6DE073DD1C75AC9400BA4AEA /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE073DC1C75AC9400BA4AEA /* Reveal.framework */; };
+		6DE073E11C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,6 @@
 		6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mmregioncode4client.txt; path = ../../../../../Desktop/mmregioncode4client.txt; sourceTree = "<group>"; };
 		6DE073C71C6C29DD00BA4AEA /* country_code.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = country_code.txt; path = ../../../../../Desktop/country_code.txt; sourceTree = "<group>"; };
 		6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryAndCode.txt; sourceTree = "<group>"; };
-		6DE073CE1C72BB5A00BA4AEA /* T8LetterIndexSearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8LetterIndexSearchIcon@2x.png"; sourceTree = "<group>"; };
 		6DE073CF1C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationItem.h; sourceTree = "<group>"; };
 		6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationItem.m; sourceTree = "<group>"; };
 		6DE073D11C72BB5A00BA4AEA /* T8LetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationView.h; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		6DE073D61C740A0600BA4AEA /* T8PhoneInputCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryCell.h; sourceTree = "<group>"; };
 		6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryCell.m; sourceTree = "<group>"; };
 		6DE073DC1C75AC9400BA4AEA /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8LetterIndexSearchIcon@2x.png"; sourceTree = "<group>"; };
 		855A5516640D5DDB8B394B61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -208,6 +208,7 @@
 		6DD828151C61D66200CC6ECE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */,
 				6DD8281F1C61DB0200CC6ECE /* item_arrow_right@2x.png */,
 				6DD828201C61DB0200CC6ECE /* item_arrow_right@3x.png */,
 				6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */,
@@ -245,21 +246,12 @@
 		6DE073CC1C72BB5A00BA4AEA /* T8LetterIndex */ = {
 			isa = PBXGroup;
 			children = (
-				6DE073CD1C72BB5A00BA4AEA /* images */,
 				6DE073CF1C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.h */,
 				6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */,
 				6DE073D11C72BB5A00BA4AEA /* T8LetterIndexNavigationView.h */,
 				6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */,
 			);
 			path = T8LetterIndex;
-			sourceTree = "<group>";
-		};
-		6DE073CD1C72BB5A00BA4AEA /* images */ = {
-			isa = PBXGroup;
-			children = (
-				6DE073CE1C72BB5A00BA4AEA /* T8LetterIndexSearchIcon@2x.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		A35C61DA36F9B9113F34D5C6 /* Frameworks */ = {
@@ -388,8 +380,8 @@
 				6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */,
 				6DD8283D1C62324F00CC6ECE /* aaa.txt in Resources */,
 				6DD827F11C61CF5100CC6ECE /* LaunchScreen.storyboard in Resources */,
-				6DE073D31C72BB5A00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */,
 				6DD827EE1C61CF5100CC6ECE /* Assets.xcassets in Resources */,
+				6DE073E11C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */,
 				6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */,
 				6DD828211C61DB0200CC6ECE /* item_arrow_right@2x.png in Resources */,
 				6DD828221C61DB0200CC6ECE /* item_arrow_right@3x.png in Resources */,
