@@ -16,21 +16,20 @@
 		6DD827F11C61CF5100CC6ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD827EF1C61CF5100CC6ECE /* LaunchScreen.storyboard */; };
 		6DD827FC1C61CF5100CC6ECE /* i18nPhoneInputDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD827FB1C61CF5100CC6ECE /* i18nPhoneInputDemoTests.m */; };
 		6DD828071C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD828061C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m */; };
-		6DD8281D1C61D6B500CC6ECE /* T8PhoneInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD8281C1C61D6B500CC6ECE /* T8PhoneInputView.m */; };
-		6DD828211C61DB0200CC6ECE /* item_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8281F1C61DB0200CC6ECE /* item_arrow_right@2x.png */; };
-		6DD828221C61DB0200CC6ECE /* item_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD828201C61DB0200CC6ECE /* item_arrow_right@3x.png */; };
-		6DD828251C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD828241C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.m */; };
-		6DD8282A1C61FEC600CC6ECE /* T8PhoneInputCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD828291C61FEC600CC6ECE /* T8PhoneInputCountryModel.m */; };
-		6DD8282D1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD8282C1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.m */; };
 		6DD8283D1C62324F00CC6ECE /* aaa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8283C1C62324F00CC6ECE /* aaa.txt */; };
 		6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */; };
 		6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C71C6C29DD00BA4AEA /* country_code.txt */; };
-		6DE073CB1C70DCF300BA4AEA /* countryAndCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */; };
-		6DE073D41C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */; };
-		6DE073D51C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */; };
-		6DE073D81C740A0600BA4AEA /* T8PhoneInputCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */; };
-		6DE073DD1C75AC9400BA4AEA /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE073DC1C75AC9400BA4AEA /* Reveal.framework */; };
-		6DE073E11C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */; };
+		6DE074061C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073F01C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m */; };
+		6DE074071C76F13400BA4AEA /* T8PhoneInputCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073F21C76F13400BA4AEA /* T8PhoneInputCountryModel.m */; };
+		6DE074081C76F13400BA4AEA /* countryAndCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073F51C76F13400BA4AEA /* countryAndCode.txt */; };
+		6DE074091C76F13400BA4AEA /* item_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073F61C76F13400BA4AEA /* item_arrow_right@2x.png */; };
+		6DE0740A1C76F13400BA4AEA /* item_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073F71C76F13400BA4AEA /* item_arrow_right@3x.png */; };
+		6DE0740B1C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073F81C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png */; };
+		6DE0740C1C76F13400BA4AEA /* T8LetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073FB1C76F13400BA4AEA /* T8LetterIndexNavigationItem.m */; };
+		6DE0740D1C76F13400BA4AEA /* T8LetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073FD1C76F13400BA4AEA /* T8LetterIndexNavigationView.m */; };
+		6DE0740E1C76F13400BA4AEA /* T8PhoneInputCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE074011C76F13400BA4AEA /* T8PhoneInputCountryCell.m */; };
+		6DE0740F1C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE074031C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.m */; };
+		6DE074101C76F13400BA4AEA /* T8PhoneInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE074051C76F13400BA4AEA /* T8PhoneInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,31 +68,30 @@
 		6DD828021C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = i18nPhoneInputDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD828061C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = i18nPhoneInputDemoUITests.m; sourceTree = "<group>"; };
 		6DD828081C61CF5100CC6ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DD8281B1C61D6B500CC6ECE /* T8PhoneInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputView.h; sourceTree = "<group>"; };
-		6DD8281C1C61D6B500CC6ECE /* T8PhoneInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputView.m; sourceTree = "<group>"; };
-		6DD8281E1C61D79700CC6ECE /* T8PhoneInputCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCommon.h; sourceTree = "<group>"; };
-		6DD8281F1C61DB0200CC6ECE /* item_arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item_arrow_right@2x.png"; sourceTree = "<group>"; };
-		6DD828201C61DB0200CC6ECE /* item_arrow_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item_arrow_right@3x.png"; sourceTree = "<group>"; };
-		6DD828231C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountrySelectVC.h; sourceTree = "<group>"; };
-		6DD828241C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountrySelectVC.m; sourceTree = "<group>"; };
-		6DD828261C61DEFF00CC6ECE /* T8PhoneInputCountryDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDataSource.h; sourceTree = "<group>"; };
-		6DD828271C61FEA600CC6ECE /* T8PhoneInputCountryModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryModelProtocol.h; sourceTree = "<group>"; };
-		6DD828281C61FEC600CC6ECE /* T8PhoneInputCountryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryModel.h; sourceTree = "<group>"; };
-		6DD828291C61FEC600CC6ECE /* T8PhoneInputCountryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryModel.m; sourceTree = "<group>"; };
-		6DD8282B1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDefaultDataSource.h; sourceTree = "<group>"; };
-		6DD8282C1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryDefaultDataSource.m; sourceTree = "<group>"; };
 		6DD8283C1C62324F00CC6ECE /* aaa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aaa.txt; path = ../../../../../Desktop/aaa.txt; sourceTree = "<group>"; };
 		6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mmregioncode4client.txt; path = ../../../../../Desktop/mmregioncode4client.txt; sourceTree = "<group>"; };
 		6DE073C71C6C29DD00BA4AEA /* country_code.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = country_code.txt; path = ../../../../../Desktop/country_code.txt; sourceTree = "<group>"; };
-		6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryAndCode.txt; sourceTree = "<group>"; };
-		6DE073CF1C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationItem.h; sourceTree = "<group>"; };
-		6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationItem.m; sourceTree = "<group>"; };
-		6DE073D11C72BB5A00BA4AEA /* T8LetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationView.h; sourceTree = "<group>"; };
-		6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationView.m; sourceTree = "<group>"; };
-		6DE073D61C740A0600BA4AEA /* T8PhoneInputCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryCell.h; sourceTree = "<group>"; };
-		6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryCell.m; sourceTree = "<group>"; };
-		6DE073DC1C75AC9400BA4AEA /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
-		6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8LetterIndexSearchIcon@2x.png"; sourceTree = "<group>"; };
+		6DE073EE1C76F13400BA4AEA /* T8PhoneInputCountryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDataSource.h; sourceTree = "<group>"; };
+		6DE073EF1C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDefaultDataSource.h; sourceTree = "<group>"; };
+		6DE073F01C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryDefaultDataSource.m; sourceTree = "<group>"; };
+		6DE073F11C76F13400BA4AEA /* T8PhoneInputCountryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryModel.h; sourceTree = "<group>"; };
+		6DE073F21C76F13400BA4AEA /* T8PhoneInputCountryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryModel.m; sourceTree = "<group>"; };
+		6DE073F31C76F13400BA4AEA /* T8PhoneInputCountryModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryModelProtocol.h; sourceTree = "<group>"; };
+		6DE073F51C76F13400BA4AEA /* countryAndCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryAndCode.txt; sourceTree = "<group>"; };
+		6DE073F61C76F13400BA4AEA /* item_arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item_arrow_right@2x.png"; sourceTree = "<group>"; };
+		6DE073F71C76F13400BA4AEA /* item_arrow_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item_arrow_right@3x.png"; sourceTree = "<group>"; };
+		6DE073F81C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8LetterIndexSearchIcon@2x.png"; sourceTree = "<group>"; };
+		6DE073FA1C76F13400BA4AEA /* T8LetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationItem.h; sourceTree = "<group>"; };
+		6DE073FB1C76F13400BA4AEA /* T8LetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationItem.m; sourceTree = "<group>"; };
+		6DE073FC1C76F13400BA4AEA /* T8LetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetterIndexNavigationView.h; sourceTree = "<group>"; };
+		6DE073FD1C76F13400BA4AEA /* T8LetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetterIndexNavigationView.m; sourceTree = "<group>"; };
+		6DE073FF1C76F13400BA4AEA /* T8PhoneInputCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCommon.h; sourceTree = "<group>"; };
+		6DE074001C76F13400BA4AEA /* T8PhoneInputCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryCell.h; sourceTree = "<group>"; };
+		6DE074011C76F13400BA4AEA /* T8PhoneInputCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryCell.m; sourceTree = "<group>"; };
+		6DE074021C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountrySelectVC.h; sourceTree = "<group>"; };
+		6DE074031C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountrySelectVC.m; sourceTree = "<group>"; };
+		6DE074041C76F13400BA4AEA /* T8PhoneInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputView.h; sourceTree = "<group>"; };
+		6DE074051C76F13400BA4AEA /* T8PhoneInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputView.m; sourceTree = "<group>"; };
 		855A5516640D5DDB8B394B61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,7 +101,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1165E625974EBD8F5DEA2324 /* libPods.a in Frameworks */,
-				6DE073DD1C75AC9400BA4AEA /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,11 +150,10 @@
 				6DD827E51C61CF5100CC6ECE /* AppDelegate.m */,
 				6DD827E71C61CF5100CC6ECE /* ViewController.h */,
 				6DD827E81C61CF5100CC6ECE /* ViewController.m */,
-				6DE073DC1C75AC9400BA4AEA /* Reveal.framework */,
+				6DE073EC1C76F13400BA4AEA /* i18nPhoneInput */,
 				6DD8283C1C62324F00CC6ECE /* aaa.txt */,
 				6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */,
 				6DE073C71C6C29DD00BA4AEA /* country_code.txt */,
-				6DD828141C61CF7500CC6ECE /* i18nPhoneInput */,
 				6DD827EA1C61CF5100CC6ECE /* Main.storyboard */,
 				6DD827ED1C61CF5100CC6ECE /* Assets.xcassets */,
 				6DD827EF1C61CF5100CC6ECE /* LaunchScreen.storyboard */,
@@ -193,65 +189,65 @@
 			path = i18nPhoneInputDemoUITests;
 			sourceTree = "<group>";
 		};
-		6DD828141C61CF7500CC6ECE /* i18nPhoneInput */ = {
+		6DE073EC1C76F13400BA4AEA /* i18nPhoneInput */ = {
 			isa = PBXGroup;
 			children = (
-				6DE073CC1C72BB5A00BA4AEA /* T8LetterIndex */,
-				6DD828151C61D66200CC6ECE /* Resource */,
-				6DD828161C61D66200CC6ECE /* Data */,
-				6DD828171C61D66200CC6ECE /* UI */,
+				6DE073ED1C76F13400BA4AEA /* Data */,
+				6DE073F41C76F13400BA4AEA /* Resources */,
+				6DE073F91C76F13400BA4AEA /* T8LetterIndex */,
+				6DE073FE1C76F13400BA4AEA /* UI */,
 			);
 			name = i18nPhoneInput;
 			path = ../../i18nPhoneInput;
 			sourceTree = "<group>";
 		};
-		6DD828151C61D66200CC6ECE /* Resource */ = {
+		6DE073ED1C76F13400BA4AEA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				6DE073E01C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png */,
-				6DD8281F1C61DB0200CC6ECE /* item_arrow_right@2x.png */,
-				6DD828201C61DB0200CC6ECE /* item_arrow_right@3x.png */,
-				6DE073CA1C70DCF300BA4AEA /* countryAndCode.txt */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		6DD828161C61D66200CC6ECE /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				6DD828261C61DEFF00CC6ECE /* T8PhoneInputCountryDataSource.h */,
-				6DD8282B1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.h */,
-				6DD8282C1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.m */,
-				6DD828271C61FEA600CC6ECE /* T8PhoneInputCountryModelProtocol.h */,
-				6DD828281C61FEC600CC6ECE /* T8PhoneInputCountryModel.h */,
-				6DD828291C61FEC600CC6ECE /* T8PhoneInputCountryModel.m */,
+				6DE073EE1C76F13400BA4AEA /* T8PhoneInputCountryDataSource.h */,
+				6DE073EF1C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.h */,
+				6DE073F01C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m */,
+				6DE073F11C76F13400BA4AEA /* T8PhoneInputCountryModel.h */,
+				6DE073F21C76F13400BA4AEA /* T8PhoneInputCountryModel.m */,
+				6DE073F31C76F13400BA4AEA /* T8PhoneInputCountryModelProtocol.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		6DD828171C61D66200CC6ECE /* UI */ = {
+		6DE073F41C76F13400BA4AEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DD8281E1C61D79700CC6ECE /* T8PhoneInputCommon.h */,
-				6DD8281B1C61D6B500CC6ECE /* T8PhoneInputView.h */,
-				6DD8281C1C61D6B500CC6ECE /* T8PhoneInputView.m */,
-				6DD828231C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.h */,
-				6DD828241C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.m */,
-				6DE073D61C740A0600BA4AEA /* T8PhoneInputCountryCell.h */,
-				6DE073D71C740A0600BA4AEA /* T8PhoneInputCountryCell.m */,
+				6DE073F51C76F13400BA4AEA /* countryAndCode.txt */,
+				6DE073F61C76F13400BA4AEA /* item_arrow_right@2x.png */,
+				6DE073F71C76F13400BA4AEA /* item_arrow_right@3x.png */,
+				6DE073F81C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png */,
 			);
-			path = UI;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		6DE073CC1C72BB5A00BA4AEA /* T8LetterIndex */ = {
+		6DE073F91C76F13400BA4AEA /* T8LetterIndex */ = {
 			isa = PBXGroup;
 			children = (
-				6DE073CF1C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.h */,
-				6DE073D01C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m */,
-				6DE073D11C72BB5A00BA4AEA /* T8LetterIndexNavigationView.h */,
-				6DE073D21C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m */,
+				6DE073FA1C76F13400BA4AEA /* T8LetterIndexNavigationItem.h */,
+				6DE073FB1C76F13400BA4AEA /* T8LetterIndexNavigationItem.m */,
+				6DE073FC1C76F13400BA4AEA /* T8LetterIndexNavigationView.h */,
+				6DE073FD1C76F13400BA4AEA /* T8LetterIndexNavigationView.m */,
 			);
 			path = T8LetterIndex;
+			sourceTree = "<group>";
+		};
+		6DE073FE1C76F13400BA4AEA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6DE073FF1C76F13400BA4AEA /* T8PhoneInputCommon.h */,
+				6DE074001C76F13400BA4AEA /* T8PhoneInputCountryCell.h */,
+				6DE074011C76F13400BA4AEA /* T8PhoneInputCountryCell.m */,
+				6DE074021C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.h */,
+				6DE074031C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.m */,
+				6DE074041C76F13400BA4AEA /* T8PhoneInputView.h */,
+				6DE074051C76F13400BA4AEA /* T8PhoneInputView.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		A35C61DA36F9B9113F34D5C6 /* Frameworks */ = {
@@ -379,14 +375,14 @@
 			files = (
 				6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */,
 				6DD8283D1C62324F00CC6ECE /* aaa.txt in Resources */,
+				6DE074091C76F13400BA4AEA /* item_arrow_right@2x.png in Resources */,
 				6DD827F11C61CF5100CC6ECE /* LaunchScreen.storyboard in Resources */,
+				6DE0740B1C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */,
+				6DE074081C76F13400BA4AEA /* countryAndCode.txt in Resources */,
 				6DD827EE1C61CF5100CC6ECE /* Assets.xcassets in Resources */,
-				6DE073E11C76B7CB00BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */,
 				6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */,
-				6DD828211C61DB0200CC6ECE /* item_arrow_right@2x.png in Resources */,
-				6DD828221C61DB0200CC6ECE /* item_arrow_right@3x.png in Resources */,
 				6DD827EC1C61CF5100CC6ECE /* Main.storyboard in Resources */,
-				6DE073CB1C70DCF300BA4AEA /* countryAndCode.txt in Resources */,
+				6DE0740A1C76F13400BA4AEA /* item_arrow_right@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,16 +455,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE073D81C740A0600BA4AEA /* T8PhoneInputCountryCell.m in Sources */,
-				6DE073D41C72BB5A00BA4AEA /* T8LetterIndexNavigationItem.m in Sources */,
+				6DE0740D1C76F13400BA4AEA /* T8LetterIndexNavigationView.m in Sources */,
+				6DE074071C76F13400BA4AEA /* T8PhoneInputCountryModel.m in Sources */,
+				6DE074101C76F13400BA4AEA /* T8PhoneInputView.m in Sources */,
 				6DD827E91C61CF5100CC6ECE /* ViewController.m in Sources */,
-				6DD8282D1C62080000CC6ECE /* T8PhoneInputCountryDefaultDataSource.m in Sources */,
 				6DD827E61C61CF5100CC6ECE /* AppDelegate.m in Sources */,
-				6DE073D51C72BB5A00BA4AEA /* T8LetterIndexNavigationView.m in Sources */,
-				6DD828251C61DE8E00CC6ECE /* T8PhoneInputCountrySelectVC.m in Sources */,
-				6DD8281D1C61D6B500CC6ECE /* T8PhoneInputView.m in Sources */,
-				6DD8282A1C61FEC600CC6ECE /* T8PhoneInputCountryModel.m in Sources */,
+				6DE0740C1C76F13400BA4AEA /* T8LetterIndexNavigationItem.m in Sources */,
 				6DD827E31C61CF5100CC6ECE /* main.m in Sources */,
+				6DE0740E1C76F13400BA4AEA /* T8PhoneInputCountryCell.m in Sources */,
+				6DE074061C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m in Sources */,
+				6DE0740F1C76F13400BA4AEA /* T8PhoneInputCountrySelectVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,10 +623,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"UIKit\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.i18nPhoneInputDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,10 +653,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"UIKit\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinfinite.i18nPhoneInputDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
