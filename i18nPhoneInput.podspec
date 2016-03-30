@@ -107,9 +107,9 @@ Pod::Spec.new do |s|
     ss.source_files = "i18nPhoneInput/T8LetterIndex/*.{h,m}"
   end
 
-  s.subspec "Resources" do |ss|
-    ss.source_files = "i18nPhoneInput/Resources/*"
-  end
+#s.subspec "Resources" do |ss|
+#   ss.source_files = "i18nPhoneInput/Resources/*"
+# end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -120,7 +120,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-# s.resources = "i18nPhoneInput/Resources/*.{png,txt}"
+  s.resources = "i18nPhoneInput/Resources/*.{png,txt}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
