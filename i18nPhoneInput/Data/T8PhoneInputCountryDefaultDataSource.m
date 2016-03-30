@@ -31,6 +31,9 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"countryAndCode" ofType:@"txt"];
     NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    if (data == nil) {
+        return;
+    }
     NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     [array enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         T8PhoneInputCountryModel *model = [[T8PhoneInputCountryModel alloc] initWithDict:obj];
