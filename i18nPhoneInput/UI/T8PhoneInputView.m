@@ -153,7 +153,7 @@
 {
     if (!_arrowView) {
         _arrowView = [[UIImageView alloc] init];
-        _arrowView.image = [UIImage imageNamed:@"item_arrow_right"];
+        _arrowView.image = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"item_arrow_right@2x" ofType:@"png"]];
     }
     return _arrowView;
 }

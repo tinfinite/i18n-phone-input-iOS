@@ -29,7 +29,7 @@
 
 - (void)prepareData
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"countryAndCode" ofType:@"txt"];
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"countryAndCode" ofType:@"txt"];
     NSData *data = [[NSData alloc] initWithContentsOfFile:path];
     if (data == nil) {
         return;

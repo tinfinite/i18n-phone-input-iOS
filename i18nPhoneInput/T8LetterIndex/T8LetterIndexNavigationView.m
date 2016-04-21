@@ -50,7 +50,7 @@
 {
     if (!_searchIconView) {
 		UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.image = [UIImage imageNamed:@"T8LetterIndexSearchIcon"];
+        imageView.image = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"T8LetterIndexSearchIcon@2x" ofType:@"png"]];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.clipsToBounds = YES;
         imageView.backgroundColor = [UIColor clearColor];

@@ -16,9 +16,6 @@
 		6DD827F11C61CF5100CC6ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD827EF1C61CF5100CC6ECE /* LaunchScreen.storyboard */; };
 		6DD827FC1C61CF5100CC6ECE /* i18nPhoneInputDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD827FB1C61CF5100CC6ECE /* i18nPhoneInputDemoTests.m */; };
 		6DD828071C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD828061C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m */; };
-		6DD8283D1C62324F00CC6ECE /* aaa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8283C1C62324F00CC6ECE /* aaa.txt */; };
-		6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */; };
-		6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073C71C6C29DD00BA4AEA /* country_code.txt */; };
 		6DE074061C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073F01C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m */; };
 		6DE074071C76F13400BA4AEA /* T8PhoneInputCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE073F21C76F13400BA4AEA /* T8PhoneInputCountryModel.m */; };
 		6DE074081C76F13400BA4AEA /* countryAndCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE073F51C76F13400BA4AEA /* countryAndCode.txt */; };
@@ -68,9 +65,6 @@
 		6DD828021C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = i18nPhoneInputDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD828061C61CF5100CC6ECE /* i18nPhoneInputDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = i18nPhoneInputDemoUITests.m; sourceTree = "<group>"; };
 		6DD828081C61CF5100CC6ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DD8283C1C62324F00CC6ECE /* aaa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aaa.txt; path = ../../../../../Desktop/aaa.txt; sourceTree = "<group>"; };
-		6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mmregioncode4client.txt; path = ../../../../../Desktop/mmregioncode4client.txt; sourceTree = "<group>"; };
-		6DE073C71C6C29DD00BA4AEA /* country_code.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = country_code.txt; path = ../../../../../Desktop/country_code.txt; sourceTree = "<group>"; };
 		6DE073EE1C76F13400BA4AEA /* T8PhoneInputCountryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDataSource.h; sourceTree = "<group>"; };
 		6DE073EF1C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhoneInputCountryDefaultDataSource.h; sourceTree = "<group>"; };
 		6DE073F01C76F13400BA4AEA /* T8PhoneInputCountryDefaultDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhoneInputCountryDefaultDataSource.m; sourceTree = "<group>"; };
@@ -151,9 +145,6 @@
 				6DD827E71C61CF5100CC6ECE /* ViewController.h */,
 				6DD827E81C61CF5100CC6ECE /* ViewController.m */,
 				6DE073EC1C76F13400BA4AEA /* i18nPhoneInput */,
-				6DD8283C1C62324F00CC6ECE /* aaa.txt */,
-				6DE073C61C6C29DD00BA4AEA /* mmregioncode4client.txt */,
-				6DE073C71C6C29DD00BA4AEA /* country_code.txt */,
 				6DD827EA1C61CF5100CC6ECE /* Main.storyboard */,
 				6DD827ED1C61CF5100CC6ECE /* Assets.xcassets */,
 				6DD827EF1C61CF5100CC6ECE /* LaunchScreen.storyboard */,
@@ -373,14 +364,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE073C81C6C29DD00BA4AEA /* mmregioncode4client.txt in Resources */,
-				6DD8283D1C62324F00CC6ECE /* aaa.txt in Resources */,
 				6DE074091C76F13400BA4AEA /* item_arrow_right@2x.png in Resources */,
 				6DD827F11C61CF5100CC6ECE /* LaunchScreen.storyboard in Resources */,
 				6DE0740B1C76F13400BA4AEA /* T8LetterIndexSearchIcon@2x.png in Resources */,
 				6DE074081C76F13400BA4AEA /* countryAndCode.txt in Resources */,
 				6DD827EE1C61CF5100CC6ECE /* Assets.xcassets in Resources */,
-				6DE073C91C6C29DD00BA4AEA /* country_code.txt in Resources */,
 				6DD827EC1C61CF5100CC6ECE /* Main.storyboard in Resources */,
 				6DE0740A1C76F13400BA4AEA /* item_arrow_right@3x.png in Resources */,
 			);
