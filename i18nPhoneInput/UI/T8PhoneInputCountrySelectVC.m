@@ -50,6 +50,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.tableView.separatorColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1];
     
     [self setUpNavigation];
     
@@ -71,7 +73,7 @@
 - (void)setUpNavigation
 {
     self.title = @"选择国家和地区";
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
     self.navigationItem.leftBarButtonItem = item;
 }
 

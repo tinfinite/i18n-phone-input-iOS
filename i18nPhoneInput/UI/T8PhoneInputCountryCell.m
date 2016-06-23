@@ -17,8 +17,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.backgroundColor = [UIColor colorWithRed:238.0/255 green:238.0/255 blue:243.0/255 alpha:1];
-        
+//        self.backgroundColor = [UIColor colorWithRed:238.0/255 green:238.0/255 blue:243.0/255 alpha:1];
+        self.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.countryLabel];
         [self addSubview:self.codeLabel];
         
@@ -27,7 +27,7 @@
             make.centerY.equalTo(self);
         }];
         [self.codeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(@(-30));
+            make.left.equalTo(_countryLabel.mas_right).offset(5);
             make.centerY.equalTo(self);
         }];
         
@@ -40,7 +40,7 @@
 {
     if (!_countryLabel) {
         _countryLabel = [[UILabel alloc] init];
-        _countryLabel.textColor = T8PhoneInputNormalColor;
+//        _countryLabel.textColor = T8PhoneInputNormalColor;
         _countryLabel.font = [UIFont systemFontOfSize:16];
     }
     return _countryLabel;
@@ -50,7 +50,7 @@
 {
     if (!_codeLabel) {
         _codeLabel = [[UILabel alloc] init];
-        _codeLabel.textColor = T8PhoneInputLightColor;
+//        _codeLabel.textColor = T8PhoneInputLightColor;
         _codeLabel.font = [UIFont systemFontOfSize:16];
     }
     return _codeLabel;
