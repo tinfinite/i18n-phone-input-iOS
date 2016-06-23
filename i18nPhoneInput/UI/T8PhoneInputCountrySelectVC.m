@@ -50,7 +50,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.separatorColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1];
     
     [self setUpNavigation];
@@ -60,6 +59,13 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.letterIndexView];
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [_tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
     
     // Do any additional setup after loading the view.
 }
@@ -91,7 +97,7 @@
 - (void)classifyData
 {
     //初始化数据结构
-    NSMutableArray *letters = [@[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]mutableCopy];
+    NSMutableArray *letters = [@[@"*",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]mutableCopy];
     for (NSString *letter in letters) {
         self.classifyDict[letter] = [NSMutableArray array];
     }
@@ -103,6 +109,10 @@
             firstLetter = [[[obj t8_country_name_zh_pinyin] substringToIndex:1] uppercaseString];
         }
         [self.classifyDict[firstLetter] addObject:obj];
+        
+        if ([[obj t8_country_key] isEqualToString:@"CN"]) {
+            [self.classifyDict[@"*"] addObject:obj];
+        }
     }];
     
     //排序 & 清理空的分组
@@ -228,6 +238,7 @@
         NSString *key = self.sectionKeys[section];
         NSArray *array = self.classifyDict[key];
         return array.count;
+        
     }else{
         return self.searchArray.count;
     }
@@ -241,7 +252,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (tableView == self.tableView) {
-        return 20.0f;
+        if (section == 0) {
+            return 0.1f;
+        }
+        return 23.0f;
     }else{
         return 0.1f;
     }
@@ -256,11 +270,9 @@
 {
     if (tableView == self.tableView) {
         UILabel *view = [[UILabel alloc] init];
-        view.text = [NSString stringWithFormat:@"   %@", self.sectionKeys[section]];
-        view.font = [UIFont boldSystemFontOfSize:14];
-        view.textColor = [UIColor grayColor];
-        view.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:245.0/255 alpha:1];
-        view.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:226.0/255 alpha:1];
+        view.text = [NSString stringWithFormat:@"    %@", self.sectionKeys[section]];
+        view.font = [UIFont boldSystemFontOfSize:16];
+        view.backgroundColor = [UIColor colorWithRed:236.0/255 green:236.0/255 blue:236.0/255 alpha:1];
         return view;
     }else{
         return nil;
@@ -308,6 +320,18 @@
     
     [self searchDone];
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
 
 #pragma mark - T8LetterIndexNavigationViewDelegate
 - (void)LetterIndexNavigationView:(T8LetterIndexNavigationView *)LetterIndexNavigationView didSelectIndex:(NSInteger)index
