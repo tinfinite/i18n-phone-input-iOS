@@ -21,7 +21,6 @@
 
 @property (strong, nonatomic) T8LetterIndexNavigationView *letterIndexView;
 
-@property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) UISearchController *searchController;
 
 @end
@@ -195,16 +194,6 @@
     return _letterIndexView;
 }
 
-- (UISearchBar *)searchBar
-{
-    if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0f)];
-        _searchBar.placeholder = @"搜索";
-        _searchBar.delegate = self;
-    }
-    return _searchBar;
-}
-
 - (UISearchController *)searchController
 {
     if (!_searchController) {
@@ -218,6 +207,8 @@
         _searchController.searchBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44.0f);
         _searchController.searchBar.placeholder = @"搜索";
         _searchController.searchBar.delegate = self;
+        _searchController.searchBar.layer.borderWidth = 1;
+        _searchController.searchBar.layer.borderColor = [[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1] CGColor];
     }
     return _searchController;
 }
