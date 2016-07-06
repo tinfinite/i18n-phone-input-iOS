@@ -361,12 +361,26 @@
     [self.searchArray removeAllObjects];
     [self.searchArray addObjectsFromArray:[self.dataSource searchCountryModelsWithKey:searchController.searchBar.text]];
     
-    //to do, update search result...
-    UITableView *tableView = ((UITableViewController *)searchController.searchResultsController).tableView;
+    CGFloat offset = 0;
+    if (searchController.active) {
+        offset = 64;
+    }else{
+        offset = 20;
+    }
+    UITableView *tableView = self.tableView;
     UIEdgeInsets contentInset = tableView.contentInset;
-    contentInset.top = 64;
+    contentInset.top = offset;
     tableView.contentInset = contentInset;
     UIEdgeInsets scrollInset = tableView.scrollIndicatorInsets;
+    scrollInset.top = offset;
+    tableView.scrollIndicatorInsets = scrollInset;
+    [tableView reloadData];
+    
+    tableView = ((UITableViewController *)searchController.searchResultsController).tableView;
+    contentInset = tableView.contentInset;
+    contentInset.top = 64;
+    tableView.contentInset = contentInset;
+    scrollInset = tableView.scrollIndicatorInsets;
     scrollInset.top = 64;
     tableView.scrollIndicatorInsets = scrollInset;
     [tableView reloadData];
