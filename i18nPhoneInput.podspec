@@ -25,6 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   A longer description of T8DataKit in Markdown format.
+                   * Think: Why did you write this? What is the focus? What does it do?
+                   * CocoaPods will be using this to generate tags, and improve search results.
+                   * Try to keep it short, snappy and to the point.
+                   * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
   s.homepage     = "https://github.com/tinfinite/i18n-phone-input-iOS"
@@ -38,7 +43,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
