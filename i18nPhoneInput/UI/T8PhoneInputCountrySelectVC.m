@@ -207,8 +207,8 @@
         _searchController.searchBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44.0f);
         _searchController.searchBar.placeholder = @"搜索";
         _searchController.searchBar.delegate = self;
-        _searchController.searchBar.layer.borderWidth = 1;
-        _searchController.searchBar.layer.borderColor = [[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1] CGColor];
+//        _searchController.searchBar.layer.borderWidth = 1;
+//        _searchController.searchBar.layer.borderColor = [[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1] CGColor];
     }
     return _searchController;
 }
@@ -263,7 +263,7 @@
         UILabel *view = [[UILabel alloc] init];
         view.text = [NSString stringWithFormat:@"    %@", self.sectionKeys[section]];
         view.font = [UIFont boldSystemFontOfSize:16];
-        view.backgroundColor = [UIColor colorWithRed:236.0/255 green:236.0/255 blue:236.0/255 alpha:1];
+        view.backgroundColor = [UIColor colorWithRed:247.0/255 green:247.0/255 blue:247.0/255 alpha:1];
         return view;
     }else{
         return nil;
